@@ -5,7 +5,7 @@ const app = express();
 
 app.use(cors());
 
-app.get('api/youtube', (req, res) => {
+app.get('/api/youtube', (req, res) => {
     res.json({ like: "like the video", subscribe: "subscribe to the channel" })
 })
 

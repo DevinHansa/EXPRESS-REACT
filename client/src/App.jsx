@@ -13,7 +13,9 @@ function App() {
         }
 
         const data = await response.json();
-        console.log(data);
+        console.log(data); { like: 'like video'; subscribe: 'subscribe channel' } 
+
+        setYoutubeCTA(data);
 
       } catch (error) {
         console.log(`Error fetching data: ${error.message}`);
@@ -24,7 +26,10 @@ function App() {
   }, []);
 
   return (
-    <div>App</div>
+    <div>
+      <h1>{youtubeCTA.like}</h1>
+      <h1>{youtubeCTA.subscribe}</h1>
+    </div>
   );
 }
 
